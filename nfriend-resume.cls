@@ -5,11 +5,11 @@
 \RequirePackage[margin=0.5in]{geometry}
 
 \RequirePackage{anyfontsize}
-\newcommand{\name}[1]{
+\newcommand{\massive}[1]{
     \fontsize{48}{1em}\selectfont #1
     \fontsize{12}{1em}\selectfont
 }
 
-\newcommand{\address}[1]{\def\@address{#1}}
+\newcommand{\Name}[1]{\def\@Name{#1}}
 
-\newcommand{\mytest}{ \@address }
+\newcommand{\MakeHeader}{ \massive{\@Name} }
