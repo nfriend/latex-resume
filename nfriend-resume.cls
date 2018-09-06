@@ -2,18 +2,19 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass{article}
 
-\RequirePackage[left=7cm, top=2cm, right=2cm, bottom=2cm]{geometry}
+\RequirePackage[left=5cm, top=2cm, right=2cm, bottom=2cm]{geometry}
 
 \newcommand{\Name}[1]{\def\@Name{#1}}
+
+\RequirePackage{fontspec}
+\setmainfont{Open Sans}
 
 \RequirePackage{changepage}
 \newcommand{\MakeHeader}{
     \noindent
-    \Huge
-    \begin{adjustwidth}{-5cm}{}
-        \@Name
+    \begin{adjustwidth}{-3cm}{}
+        {\fontsize{28}{28}\selectfont \@Name}
     \end{adjustwidth}
-    \normalsize
 }
 
 \RequirePackage{titlesec}
@@ -21,7 +22,7 @@
 \titleformat
 {\section}                  % command
 [leftmargin]                % shape
-{\filleft}                  % format
+{\filright}                  % format
 {}                          % label
 {0cm}                       % sep
 {\textbf}                   % before
@@ -29,6 +30,10 @@
 
 \titlespacing
 {\section}      % command
-{4.5cm}           % left
+{2.5cm}           % left
 {6pt}           % before-sep
-{0cm}           % after-sep
+{.5cm}           % after-sep
+
+% effectively apply \noindent to entire file:
+% https://tex.stackexchange.com/a/27804/169275
+\setlength\parindent{0pt}
