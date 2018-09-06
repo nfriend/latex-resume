@@ -6,18 +6,14 @@
 
 \newcommand{\Name}[1]{\def\@Name{#1}}
 
-\RequirePackage{anyfontsize}
+\RequirePackage{changepage}
 \newcommand{\MakeHeader}{
-    % \fontsize{48}{1em}
-    % \selectfont
-    % \newgeometry{left=2cm}
     \noindent
     \Huge
-    \@Name
+    \begin{adjustwidth}{-5cm}{}
+        \@Name
+    \end{adjustwidth}
     \normalsize
-    % \fontsize{12}{1em}
-    % \selectfont
-    % \newgeometry{left=7cm}
 }
 
 \RequirePackage{titlesec}
