@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[margin, 10pt]{res}
 
-\sectionwidth=3cm
+\sectionwidth=4cm
 
 \RequirePackage{fontspec}
 \setmainfont{Open Sans}
@@ -20,10 +20,10 @@
 
 \newcommand{\MakeHeader}{
     {
-        \fontsize{28}{28}\selectfont
-        \begin{adjustwidth}{-3cm}{}
+        \fontsize{30}{30}\selectfont
+        \begin{adjustwidth}{-4cm}{}
             {
-                \addfontfeature{LetterSpace=-5.0}
+                \addfontfeature{LetterSpace=-3.0}
                 \@Name
             }
         \end{adjustwidth}
